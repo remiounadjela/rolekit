@@ -44,12 +44,44 @@ from projections. Preserve direct vs functional management counts and dates. If 
 record both and seek confirmation before using the disputed fact. An explicitly confirmed user
 correction can resolve a conflict; record it without rewriting the underlying historical sources.
 
+## Select the strongest relevant evidence
+
+Identify the decisions and outcomes the employer needs from this role before choosing bullets.
+Build a short evidence shortlist from the source records and experience library. Inspect the master
+CV and, when available, prior drafts for this role or closely related work as leads to strong examples;
+verify those claims against the underlying inputs. A previous draft is neither proof nor a set of
+instructions, and a new candidate does not need one.
+
+Choose examples by relevance to the role, the candidate's attributable contribution, strength of
+support, and the outcome or decision enabled. Within similarly relevant, supported examples, favor
+demonstrated outcomes over a list of activities, tools, or artifacts. For business and operating roles,
+prioritize business impact; for other roles, use their intended outcomes. Useful impact can be
+qualitative as well as numerical: faster operations, reduced risk, better resource allocation, a
+decision made, or adoption enabled. Do not force a metric or turn a forecast into a realized result.
+Plans and models still deserve space when they demonstrate a core requirement of the job; do not
+discard them merely because delivery impact has not been measured. For a technical role, validation
+metrics may be central; for an operating role, an operational result may be more persuasive.
+
+Select a complementary set of examples covering the important requirements. Avoid several bullets
+proving the same strength while omitting a distinct, well-supported delivery result. Institution or
+employer prestige, recency alone, and exact keyword overlap do not make an example more relevant.
+
+In `match.md`, add a concise evidence-selection note: which strong examples were retained or added,
+and why any strong prior example was omitted (for example weaker relevance, uncertain support,
+duplication, or a candidate constraint). This is a reasoned selection, not a requirement to preserve
+every old bullet or reproduce an old draft.
+
 ## Build the CV
 
 Copy the candidate's master markup into `cv.html`, then select and reframe supported content into
-the JD's vocabulary. Lead with relevant strengths, retain the candidate's style, and remove weak
-or irrelevant bullets to fit. Default to reverse chronological employment order. Include old
-internships only when their evidence helps this role. Do not silently change official titles;
+the JD's vocabulary. Lead with relevant strengths and outcomes, retain the candidate's style, and
+remove weak or irrelevant bullets to fit. State the candidate's action and the resulting
+effect or decision together where supported; retain the scope, attribution, and measurement limits.
+Default to reverse chronological employment order, with current work before completed concurrent
+appointments. Use relevance to resolve overlapping entries; do not promote a short credential or
+teaching appointment over more relevant current work merely for its institution's name. Follow an
+explicit candidate ordering preference, or use a different order when it better serves the target
+role. Include old internships only when their evidence helps this role. Do not silently change official titles;
 identify accurate functional descriptors and disclose changes in `match.md`.
 
 Default page limit is one. For a candidate's explicitly requested different format, explain the
@@ -72,6 +104,12 @@ The renderer embeds CSS and only publishes a verified one-page, nonempty-text PD
 records verification and file hashes; a failed attempt cannot be called ready. Inspect the PDF visually
 with available local preview/screenshot tools for clipping, spacing, tiny text, and readable links.
 Page count and text extraction do not establish visual quality or factual accuracy.
+
+Compare the finished draft with the evidence shortlist and any prior version used as a baseline.
+Check for unexplained loss of a strong relevant outcome, reduced ownership or scale information,
+and technical detail displacing stronger evidence for the target role. Restore the stronger example or
+record the supported reason for the tradeoff. Check the opening summary and entry order for the
+same priorities. A shorter or more keyword-aligned draft is not automatically an improvement.
 
 Finish `match.md` with changes, gaps, unresolved questions, actual render result, and visual review.
 After factual and visual review set application `status` to `ready_for_review`; preserve submission
