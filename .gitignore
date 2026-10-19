@@ -1,0 +1,7 @@
+# Candidate workspaces contain private CVs, evidence, and application records.
+/workspaces/
+/.local/
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store

@@ -1,0 +1,4 @@
+interface:
+  display_name: "RoleKit Job Search"
+  short_description: "Find fitting roles and prepare authorized applications"
+  default_prompt: "Use $job-search with my candidate workspace to scan my sources and prepare fitting applications."

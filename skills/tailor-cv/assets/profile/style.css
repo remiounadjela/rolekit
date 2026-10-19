@@ -1,0 +1,51 @@
+/* CV print stylesheet — single source of truth for the look.
+   The whole document scales from one knob: :root { --scale }.
+   render.py lowers --scale until the CV fits on one page.
+   Everything is sized in rem/em so one knob shrinks it proportionally. */
+
+:root { --scale: 1; }
+html { font-size: calc(10pt * var(--scale)); }
+
+@page { size: Letter; margin: 0.42in 0.6in; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.98rem;
+  line-height: 1.26;
+  color: #111;
+}
+
+h1 { font-size: 2.1rem; margin: 0 0 0.1rem 0; letter-spacing: 0.04em; }
+
+.contact { font-size: 0.9rem; margin: 0 0 0.7rem 0; color: #222; }
+.contact a { color: #1a4b8c; text-decoration: none; }
+
+.summary { margin: 0 0 0.5rem 0; text-align: justify; }
+
+.skills { margin: 0 0 0.6rem 0; font-size: 0.95rem; }
+.skills b { font-variant: small-caps; letter-spacing: 0.03em; }
+
+h2 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.2rem;
+  margin: 0.7rem 0 0.5rem 0;
+}
+
+.entry { margin: 0 0 0.55rem 0; }
+.row { display: flex; justify-content: space-between; align-items: baseline; }
+.company { font-weight: bold; font-size: 1.05rem; }
+.place { font-size: 0.95rem; color: #333; }
+.role { font-variant: small-caps; letter-spacing: 0.04em; font-size: 1rem; }
+.date { font-style: italic; font-size: 0.95rem; color: #333; white-space: nowrap; }
+.second-role { margin-top: 0.4rem; }
+
+ul { margin: 0.2rem 0 0 0; padding-left: 1.5rem; }
+li { margin: 0 0 0.2rem 0; text-align: justify; }
+
+.edu-line { margin: 0 0 0.2rem 0; }
+.edu-note { font-style: italic; font-size: 0.9rem; color: #333; margin: 0 0 0.3rem 0; }

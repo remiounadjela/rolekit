@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tailor CV"
+  short_description: "Evidence-backed CVs and application preparation"
+  default_prompt: "Use $tailor-cv to tailor my CV for a job using my selected RoleKit workspace."

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Workspace commands need only Python 3.10+; rendering has its own dependencies.
+set -eu
+ROLEKIT_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+exec python3 "$ROLEKIT_ROOT/skills/tailor-cv/scripts/rolekit.py" "$@"

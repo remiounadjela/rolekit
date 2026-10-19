@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "sources": [],
+  "brief": "profile/search_brief.md",
+  "application_facts": "profile/application_facts.md",
+  "mode": "prepare",
+  "authorization": null,
+  "daily_limit": 5
+}
