@@ -59,12 +59,14 @@ by this tool. Never squeeze below the bundled renderer's .85 scale minimum. Cut 
 ## Render and review
 
 ```sh
-<skill-dir>/scripts/render.sh <application-folder> --style <workspace>/profile/style.css
+python3 <skill-dir>/scripts/render_auto.py <application-folder> --style <workspace>/profile/style.css
 ```
 
-Requires a host Python 3.10+ runtime. The shell wrapper automatically prepares pinned `pypdf` in a
+Requires a host Python 3.10+ runtime. The launcher automatically prepares pinned `pypdf` in a
 private environment and, if Chrome/Chromium is absent, a private Chromium for export. No `uv` or
 global package install is required. On Windows, use `python <skill-dir>/scripts/render_auto.py ...`.
+Run the Python file explicitly so archive downloads work without executable permissions; the
+optional shell wrapper can be invoked with `bash <skill-dir>/scripts/render.sh ...`.
 Alternatively, direct `render.py` use works with its dependencies already installed. There is no remote PDF service.
 The renderer embeds CSS and only publishes a verified one-page, nonempty-text PDF. `render.json`
 records verification and file hashes; a failed attempt cannot be called ready. Inspect the PDF visually

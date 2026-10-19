@@ -2,7 +2,7 @@
 
 ## Automatic setup
 
-The agent runs `scripts/start.sh --cv <uploaded-file>` (or `python scripts/start.py` on Windows).
+The agent runs `python3 scripts/start.py --cv <uploaded-file>` (`python` on Windows).
 This combines private workspace creation, dependency preparation, and original-file import. It does
 not generate career facts or a CV; continue the profile-building instructions after setup.
 
@@ -21,7 +21,7 @@ filled in from an unambiguous CV or the conversation. Original import metadata r
 Text and DOCX extraction need no third-party packages. For PDF input, the launcher reuses a compatible
 Python dependency or creates a private venv and installs pinned `pypdf`. No `uv`, system Python
 modification, global pip, browser installation, or OS package manager is required to begin onboarding.
-`render.sh` later prepares PDF export automatically, using existing Chrome/Chromium when available
+`render_auto.py` later prepares PDF export automatically, using existing Chrome/Chromium when available
 or a private Playwright-managed Chromium when absent. It never installs privileged OS dependencies.
 Managed downloads follow [Playwright's browser installation](https://playwright.dev/python/docs/browsers).
 
@@ -55,7 +55,7 @@ It never writes the active profile or creates a tailored CV. Use the printed pat
 | Audio without a transcript | Use an available host transcription tool within the request's scope | The bundled importer has no speech recognizer; if unavailable, ask for transcript or dictated text |
 | Nothing yet | Save the candidate's conversational answers as new dated input snapshots | Do not require a CV, employer, degree, or formal work history |
 
-The normal user path goes through `start.sh` so dependencies are automatic. For advanced callers
+The normal user path goes through `start.py` so dependencies are automatic. For advanced callers
 using `import_input.py` directly, PDF extraction needs the same pinned dependency used by the renderer.
 Use the Python runtime returned by the launcher, or an existing dependency environment:
 

@@ -61,7 +61,7 @@ workspace separately from reinstalling the skills.
 Python 3.10+ is enough to manage workspaces:
 
 ```sh
-skills/onboard-candidate/scripts/start.sh --cv /path/to/cv.pdf
+python3 skills/onboard-candidate/scripts/start.py --cv /path/to/cv.pdf
 # The result returns the private workspace path for follow-up inputs.
 # On Windows: python skills/onboard-candidate/scripts/start.py --cv C:\path\to\cv.pdf
 # Lower-level manual setup remains available:
@@ -90,13 +90,14 @@ Ask your agent to tailor for the chosen workspace and application folder. It rea
 writes `cv.html` and `match.md`, and runs:
 
 ```sh
-skills/tailor-cv/scripts/render.sh workspaces/my-profile/applications/company_role-title --style workspaces/my-profile/profile/style.css
+python3 skills/tailor-cv/scripts/render_auto.py workspaces/my-profile/applications/company_role-title --style workspaces/my-profile/profile/style.css
 ```
 
-Use the actual folder printed by `new` (run `./rolekit new --help` for details). The render wrapper
+Use the actual folder printed by `new` (run `./rolekit new --help` for details). The render launcher
 automatically prepares `pypdf` and uses an installed Chrome/Chromium or downloads a private Chromium
 when absent. `ROLEKIT_CHROME` or `CHROME_BIN` can override browser discovery. Direct Python usage
 works with dependencies already installed; Windows can run `python skills/tailor-cv/scripts/render_auto.py`.
+Python entrypoints work even when downloaded archives omit shell-script executable permissions.
 The renderer checks one page and extractable text, embeds the
 style, and writes a hash-backed `render.json`. Your agent also inspects the PDF visually.
 

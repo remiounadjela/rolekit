@@ -5,7 +5,7 @@
 # ///
 """Render a self-contained CV to a verified one-page PDF using local Chrome.
 
-Run render.sh APPLICATION_FOLDER [--style FILE]. The input is cv.html. On success,
+Run python render_auto.py APPLICATION_FOLDER [--style FILE]. The input is cv.html. On success,
 cv.html contains the chosen inline stylesheet, cv.pdf contains one readable page,
 and render.json records artifact hashes. On failure existing HTML/PDF stay intact
 and render.json is marked failed. No network resources are permitted.

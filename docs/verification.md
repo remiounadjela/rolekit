@@ -84,3 +84,12 @@ renderer produced a verified one-page PDF. A fresh shell-only browser download w
 Both resulting PDFs were visually inspected. Only package/browser binaries were downloaded; no
 candidate document was uploaded to a conversion service. macOS was exercised live; Windows/Linux
 paths and setup behavior have automated coverage but no live platform smoke.
+
+## GitHub installation
+
+The public repository was installed into a fresh temporary destination using Codex's GitHub skill
+installer with all three skill paths. Downloaded archives omit executable permissions, so canonical
+startup and rendering instructions explicitly invoke Python. The setup regression also removes all
+file executable bits before exercising the installed layout. A real downloaded installation created
+a fresh private workspace, preserved both a CV and experience transcript, and passed `doctor`
+without modifying the skill installation or global configuration.

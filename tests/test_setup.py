@@ -125,10 +125,13 @@ class SetupTests(unittest.TestCase):
         self.assertEqual(result["setup_status"], "failed")
         self.assertEqual(files(path), before)
 
-    def test_uploaded_text_from_unrelated_cwd_works_with_copied_readonly_skill_layout(self):
+    def test_uploaded_text_from_unrelated_cwd_works_without_skill_executable_permissions(self):
         install = self.root / "installed"
         shutil.copytree(REPO / "skills/tailor-cv", install / "tailor-cv")
         shutil.copytree(REPO / "skills/onboard-candidate", install / "onboard-candidate")
+        for path in install.rglob("*"):
+            if path.is_file():
+                path.chmod(0o644)
         before = files(install)
         unrelated = self.root / "unrelated"
         unrelated.mkdir()

@@ -20,12 +20,13 @@ commands. Use the host's attachment tools to obtain a readable local copy of the
 For a new candidate, run the bundled launcher with the supplied CV; no name or workspace is required:
 
 ```sh
-<skill-dir>/scripts/start.sh --cv <uploaded-file>
+python3 <skill-dir>/scripts/start.py --cv <uploaded-file>
 ```
 
-On Windows or a host without a POSIX shell, run `python <skill-dir>/scripts/start.py` with the same
-arguments. Use an available Python 3.10+ runtime, including the host's bundled Python if needed
-(`ROLEKIT_PYTHON` selects it for the shell launcher). The launcher creates a fresh private workspace
+Use an available Python 3.10+ runtime (`python` on Windows, or the host's bundled Python if needed).
+Invoke the Python file explicitly: downloaded skill archives may omit executable permissions.
+The optional shell launcher can be run as `bash <skill-dir>/scripts/start.sh`; do not ask users to
+change permissions. The launcher creates a fresh private workspace
 outside installed skills and provisions missing PDF dependencies in a private virtual environment.
 Read its JSON result and retain the exact workspace path in this chat. It never selects a global
 active candidate or resumes another person by name. Use `--name` or `--workspace` only when already
@@ -57,8 +58,8 @@ Preserve each original before interpreting it. The launcher imports the initial 
 local PDF, `.docx`, `.md`, or `.txt` inputs, use the same workspace:
 
 ```sh
-<skill-dir>/scripts/start.sh --workspace <workspace> --cv <input-file>
-<skill-dir>/scripts/start.sh --workspace <workspace> --experience <notes-file>
+python3 <skill-dir>/scripts/start.py --workspace <workspace> --cv <input-file>
+python3 <skill-dir>/scripts/start.py --workspace <workspace> --experience <notes-file>
 ```
 
 Use the lower-level `import_input.py --type evidence` with the returned Python runtime for supporting
